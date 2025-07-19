@@ -1,11 +1,13 @@
 # Legal Document Analyzer
 
-A full-stack application that allows users to upload legal documents, analyzes them, and provides smart insights.
+Built a full-stack platform to upload legal documents (PDF, DOCX, TXT), analyze them using Gemini API to detect
+suspicious clauses, and provide simplified summaries with recommendations. Includes an analytics dashboard showing
+clause severity, risk scores, and key insights
 
 ## 🌟 Features
 
 - Upload and parse legal PDFs
-- Smart analysis (AI-powered or placeholder)
+- Smart analysis (AI-powered)
 - MongoDB-based storage
 - Secure Express.js backend (CORS, Helmet, Rate Limiting)
 - React.js-based modern frontend
