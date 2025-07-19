@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400;
+}
+
+/* Smooth transitions for interactive elements */
+button, a {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Custom focus styles */
+.focus\:ring-brand:focus {
+  --tw-ring-color: #0ea5e9;
+}
+
+/* Loading animation */
+@keyframes pulse-brand {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse-brand {
+  animation: pulse-brand 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* File upload zone styles */
+.upload-zone {
+  background-image: url("data:image/svg+xml,%3csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3e%3cdefs%3e%3cpattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(0.5) rotate(0)'%3e%3crect x='0' y='0' width='100%25' height='100%25' fill='transparent'/%3e%3cpath d='m0 10h20m-10-10v20' stroke='%23e5e7eb' stroke-width='1'/%3e%3c/pattern%3e%3c/defs%3e%3crect width='100%25' height='100%25' fill='url(%23a)'/%3e%3c/svg%3e");
+}
+
+/* Document preview styles */
+.document-content {
+  font-family: 'Georgia', serif;
+  line-height: 1.6;
+}
+
+/* Risk score gradient */
+.risk-gradient {
+  background: linear-gradient(90deg, #10b981 0%, #f59e0b 50%, #ef4444 100%);
+}
+
+/* Suspicious clause highlight */
+.clause-highlight {
+  background: linear-gradient(90deg, rgba(239, 68, 68, 0.1) 0%, rgba(239, 68, 68, 0.05) 100%);
+  border-left: 4px solid #ef4444;
+}
+
+/* Animation for new notifications */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-right {
+  animation: slideInRight 0.3s ease-out;
+}
+
+/* Custom badge styles */
+.badge-high-risk {
+  @apply bg-red-100 text-red-800 border border-red-200;
+}
+
+.badge-medium-risk {
+  @apply bg-yellow-100 text-yellow-800 border border-yellow-200;
+}
+
+.badge-low-risk {
+  @apply bg-green-100 text-green-800 border border-green-200;
+}
+
+/* Table hover effects */
+.table-row-hover:hover {
+  @apply bg-gray-50 transition-colors duration-150;
+}
+
+/* Card hover effects */
+.card-hover:hover {
+  @apply shadow-md transform scale-105 transition-all duration-200;
+}
+
+/* Progress bar styles */
+.progress-bar {
+  transition: width 0.3s ease-in-out;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 640px) {
+  .container {
+    @apply px-2;
+  }
+  
+  .grid-responsive {
+    @apply grid-cols-1;
+  }
+}
+
+/* Dark mode support (optional) */
+@media (prefers-color-scheme: dark) {
+  .dark-mode {
+    @apply bg-gray-900 text-white;
+  }
+}
